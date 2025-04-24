@@ -4,7 +4,7 @@
     <title>ungulata.info</title>
   </head>
     <body>
-      <p>booking</p>
-      <p>previous work</p>
+      <p><a href="./booking">booking</a></p>
+      <p><a href="./previous work">previous work</a></p>
     </body>
 </html>
