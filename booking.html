@@ -1,61 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>booking form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking - ungulata.info</title>
+    
+    <style>
+      /* Layout & Typography */
+      html {
+        font-size: 18px; /* High mobile visibility baseline */
+      }
+      
+      body {
+        font-family: "Courier New", Courier, monospace, ui-monospace;
+        line-height: 1.6;
+        color: #1a1a1a;
+        max-width: 650px; /* Kept concise to make reading text instructions easy */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fafafa;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+      }
+
+      /* Consistent Top Navigation */
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 40px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        border-bottom: 1px dashed #666;
+        padding-bottom: 2px;
+      }
+
+      nav a:hover {
+        border-bottom: 1px solid #000;
+      }
+
+      .intro-box {
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        margin-bottom: 40px;
+        border-radius: 2px;
+      }
+
+      .intro-box h3 {
+        margin-top: 0;
+        text-decoration: underline;
+      }
+
+      /* Clean Form Styling for Mobile Fingers */
+      form {
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        padding: 24px;
+        border-radius: 2px;
+      }
+
+      form h3 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      /* Large, easy-to-tap inputs */
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        width: 100%;
+        box-sizing: border-box; /* Prevents padding from spilling over the edge */
+        font-family: inherit;
+        font-size: 1rem;
+        padding: 12px;
+        border: 1px solid #ccc;
+        background-color: #fcfcfc;
+        border-radius: 2px;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="tel"]:focus,
+      textarea:focus {
+        border-color: #000;
+        outline: none;
+        background-color: #fff;
+      }
+
+      /* Radio Buttons Options Setup */
+      .radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 15px 0;
+      }
+
+      .radio-option {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .radio-option input[type="radio"] {
+        margin: 0 12px 0 0;
+        width: 20px;
+        height: 20px; /* Enlarged touch targeting */
+      }
+
+      .radio-option label {
+        display: inline;
+        margin-bottom: 0;
+        cursor: pointer;
+      }
+
+      hr {
+        border: 0;
+        border-top: 1px dashed #ccc;
+        margin: 25px 0;
+      }
+
+      /* Action Button Formatting */
+      button[type="submit"] {
+        display: block;
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        font-family: inherit;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 16px;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.2s ease;
+        margin-top: 20px;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #333;
+      }
+
+      button[type="submit"]:disabled {
+        background-color: #999;
+        cursor: not-allowed;
+      }
+    </style>
   </head>
   <body>
-    <a href="./index.html">back to main page</a>
-    <h1></h1>
-    <h3>please read before filling out booking form:</h3>
-    <p>if you like any of the pieces on my <a href="./flash.html">flash</a> you can request them on the form. some will have size minimums to ensure quality and detail. if you aren't sure about placement, i can make recommendations or tell you what to do. i'm a girl with a lot of ideas, strong opinions, and good taste. you can also request edits on flash pieces. i would love to work with you to design something that feels exciting to both of us, whether that's editing a flash piece or creating something new. if you just have a generalized desire for some new ink and possess a secure, transfeminist relationship to <em>The Body</em>, you can also select the <em>Freedom</em> option (free of charge) in which i tattoo whatever i want on you and you don't get to see it until after. for all other appointments, i will recommend a price that i think is appropriate. that being said, all tattoos are no judgement pay-what-you-can. tattoos are unaffordable, the world is cruel, and art should be free. i love tattooing and i have money so really please take advantage of this. trades more than welcome too. since i only do handpoke, medium to large pieces will likely take more than one session. i will give you a time and session # estimate but i could be wrong. sorry not sorry. let me know if you have any questions.</p>
-    <hr>
-    
-    <form id="bookingForm">
-      <h3>booking form</h3>
-      <label for="first name">first name</label>
-        <input type="text" name="first name" id="first name" placeholder="first name" required>
-      <br>
-      <br>
-      <label for="last name">last name</label>
-        <input type="text" name="last name" id="last name" placeholder="last name" required>
-      <br>
-      <br>
-      <label for="email">email</label>
-        <input type="text" name="email" id="email" placeholder="email" required>
-      <br>
-      <br>
-      <label for="phone number">phone number</label>
-        <input type="text" name="phone number" id="phone number" placeholder="phone number" required>
-      <br>
-      <hr>
-      <p>flash, custom, or the <em>Freedom</em> option?</p>
-        <input type="radio" name="source" id="flash" value="flash">
-        <label for="flash">flash</label>
-        <input type="radio" name="source" id="custom" value="custom">
-        <label for="custom">custom</label>
-        <input type="radio" name="source" id="freedom" value="freedom">
-        <label for="freedom"><em>Freedom</em></label>
-      <hr>
-      <section class="sizeplacement">
+
+    <header>
+      <h1>ungulata.info</h1>
+      <nav>
+        <a href="./index.html">home</a>
+        <a href="./flash.html">flash</a>
+        <a href="./booking.html">booking</a>
+        <a href="./previous_work.html">previous work</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro-box">
+        <h3>please read before filling out booking form:</h3>
+        <p>if you like any of the pieces on my <a href="./flash.html">flash</a> you can request them on the form. some will have size minimums to ensure quality and detail. if you aren't sure about placement, i can make recommendations or tell you what to do. i'm a girl with a lot of ideas, strong opinions, and good taste. you can also request edits on flash pieces. i would love to work with you to design something that feels exciting to both of us, whether that's editing a flash piece or creating something new.</p>
+        <p>if you just have a generalized desire for some new ink and possess a secure, transfeminist relationship to <em>The Body</em>, you can also select the <em>Freedom</em> option (free of charge) in which i tattoo whatever i want on you and you don't get to see it until after.</p>
+        <p>for all other appointments, i will recommend a price that i think is appropriate. that being said, all tattoos are no judgement pay-what-you-can. tattoos are unaffordable, the world is cruel, and art should be free. i love tattooing and i have money so really please take advantage of this. trades more than welcome too.</p>
+        <p>since i only do handpoke, medium to large pieces will likely take more than one session. i will give you a time and session # estimate but i could be wrong. sorry not sorry. let me know if you have any questions.</p>
+      </section>
+      
+      <form id="bookingForm">
+        <h3>booking form</h3>
+        
+        <div class="form-group">
+          <label for="first_name">first name</label>
+          <input type="text" name="first name" id="first_name" placeholder="first name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="last_name">last name</label>
+          <input type="text" name="last name" id="last_name" placeholder="last name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">email</label>
+          <input type="email" name="email" id="email" placeholder="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone_number">phone number</label>
+          <input type="tel" name="phone number" id="phone_number" placeholder="phone number" required>
+        </div>
+        
+        <hr>
+        
+        <div class="form-group">
+          <label>flash, custom, or the <em>Freedom</em> option?</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" name="source" id="source_flash" value="flash">
+              <label for="source_flash">flash</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="source" id="source_custom" value="custom">
+              <label for="source_custom">custom</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" name="source" id="source_freedom" value="freedom">
+              <label for="source_freedom"><em>Freedom</em></label>
+            </div>
+          </div>
+        </div>
+        
+        <hr>
+        
+        <div class="form-group">
           <label for="description">description (if custom or edited flash)</label>
-          <br>
-          <textarea id="description" name="description" rows="3" cols="40"></textarea>
-        </section>
-      <section class="sizeplacement">
+          <textarea id="description" name="description" rows="4"></textarea>
+        </div>
+        
+        <div class="form-group">
           <label for="size">size/placement</label>
-          <br>
-          <textarea id="size" name="size" rows="3" cols="40"></textarea>
-        </section>
-      <hr> 
-      <section class="extra">
+          <textarea id="size" name="size" rows="4"></textarea>
+        </div>
+        
+        <hr> 
+        
+        <div class="form-group">
           <label for="extra">anything else you'd like me to know?</label>
-          <br>
-          <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
-        </section>
-      <hr>
-      <p>if you are interested in a custom tattoo and have reference photos you'd like to share, please send them to ungulata.info@gmail.com</p>
-      <button type="submit">submit</button>
-    </form>
+          <textarea id="extra" name="extra" rows="4"></textarea>
+        </div>
+        
+        <hr>
+        
+        <p style="font-size: 0.9rem; color: #555; margin-bottom: 20px;">if you are interested in a custom tattoo and have reference photos you'd like to share, please send them to <a href="mailto:ungulata.info@gmail.com">ungulata.info@gmail.com</a></p>
+        
+        <button type="submit">submit</button>
+      </form>
+    </main>
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyKUwNN9eb0gLaUr098JoVL6W8DP-9OMXZwZysRo5KjJ3g4SmEa9wEoGGpdxCGofZ51/exec';
@@ -64,7 +267,6 @@
       form.addEventListener('submit', e => {
         e.preventDefault();
         
-        // Change button text to show it's working
         const submitButton = form.querySelector('button[type="submit"]');
         submitButton.disabled = true;
         submitButton.innerText = 'submitting...';
